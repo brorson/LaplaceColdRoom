@@ -54,8 +54,8 @@ git clone https://github.com/Kitware/VTK.git
 mkdir VTK/build  
 cd VTK/build  
 ccmake ..   
-# This opens up a curses-based config window.  Select the build options  
-# you want.  
+\# This opens up a curses-based config window.  Select the build options  
+\# you want.  
 make   
 make install  
 
