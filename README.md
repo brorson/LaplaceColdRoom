@@ -24,8 +24,8 @@ more beautiful.
 To change the simulation parameters, edit the file heateq2D_jacobi.h.
 To build and run the CUDA program, do:
 
-make
-./heateq2D_jacobi
+make  
+./heateq2D_jacobi  
 
 A serial version written in Matlab (*.m files) is also included in
 this directory.  The Matlab version is limited in the number of points
@@ -38,9 +38,9 @@ Stuart Brorson, June 2022.
 Note that to run the executable, you need to provide a path to your
 shared libs.  On my system I put the following into my .bashrc file:
 
-export PATH=${PATH}:/usr/local/cuda-11.1/bin
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda-11.1/lib64
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/src/VTK/build/lib
+export PATH=${PATH}:/usr/local/cuda-11.1/bin  
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda-11.1/lib64  
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/src/VTK/build/lib  
 
 Your paths are probably different, but you need to specify them
 somewhere to be able to run this program.
@@ -49,15 +49,15 @@ somewhere to be able to run this program.
 This app uses VTK for 3D visualization of the 2D temp profile.  
 To build VTK on Ubuntu 20.4:
 
-cd /usr/local/src  # Base dir where you keep your source files
-git clone https://github.com/Kitware/VTK.git
-mkdir VTK/build
-cd VTK/build
-ccmake .. 
-# This opens up a curses-based config window.  Select the build options
-# you want.
-make 
-make install
+cd /usr/local/src  # Base dir where you keep your source files  
+git clone https://github.com/Kitware/VTK.git  
+mkdir VTK/build  
+cd VTK/build  
+ccmake ..   
+# This opens up a curses-based config window.  Select the build options  
+# you want.  
+make   
+make install  
 
 Then, to build my Laplace solver the recommended path (recommended by
 Kitware) is to use CMake.  I didn't want to fiddle around with CMake
